@@ -28,7 +28,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls   - list files in the directory
+ls -a  - list all files in the directory, including hidden files
+ls -l  - list the long format, including disk size and last update time
+ls -lh - collapses size to k, mB, gB
+ls -lah - list all files, long format with sizes in k, mB, gB
+ls -t - display files with newest first
+ls -Glp - enables color output, long format, slash after all directories
 
 ---
 
@@ -36,7 +42,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls -R - recursive directories, helpful for file system grep
+ls -c - by timestamp 
+ls -m 
+ls -t - always looking for the latest ones
+ls -1 - so much easier to read
 
 ---
 
@@ -44,7 +54,9 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > xargs takes input from either stdin or piped from another operation and executes a command on the input. It is especially helpful when doing a complex find of files based on criteria and want to move, delete, rename etc those exact files.
+
+find /tmp -name core -type f -print0 | xargs -0 /bin/rm -f
 
  
 
