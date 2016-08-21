@@ -13,7 +13,16 @@ these in a couple of hours.
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 1. grep - search for a string in a file  
+2. find - find a file   
+3. more - paginate through a file    
+4. cat - stream text to stdout  
+5. pwd - list current directory  
+6. top - list top of a file  
+7. man - help page for a command    
+8. ps - see what else is running  
+9. diff - see what is different between two files
+10. sort - sort the file  
 
 ---
 
@@ -28,13 +37,13 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > ls   - list files in the directory
-ls -a  - list all files in the directory, including hidden files
-ls -l  - list the long format, including disk size and last update time
-ls -lh - collapses size to k, mB, gB
-ls -lah - list all files, long format with sizes in k, mB, gB
-ls -t - display files with newest first
-ls -Glp - enables color output, long format, slash after all directories
+> > ls   - list files in the directory  
+ls -a  - list all files in the directory, including hidden files  
+ls -l  - list the long format, including disk size and last update time  
+ls -lh - collapses size to k, mB, gB  
+ls -lah - list all files, long format with sizes in k, mB, gB  
+ls -t - display files with newest first  
+ls -Glp - enables color output, long format, slash after all directories  
 
 ---
 
@@ -42,11 +51,11 @@ ls -Glp - enables color output, long format, slash after all directories
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > ls -R - recursive directories, helpful for file system grep
-ls -c - by timestamp 
-ls -m 
-ls -t - always looking for the latest ones
-ls -1 - so much easier to read
+> > ls -R - recursive directories, helpful for file system grep  
+ls -c - by timestamp  
+ls -m  
+ls -t - always looking for the latest ones  
+ls -1 - so much easier to read  
 
 ---
 
