@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and Tuples are similar in that both enable iteration and slicing in the same way and allow the ability to hold different data types. However, the big difference lies in that tuples are immutable while lists are considered mutable. This means that once created, tuples can not be changed, only cloned to a separate object.  Lists, however, can be changed in place. Because of this difference and the corresponding consequence that lists do not implement *hashable*, only tuples can be used as keys in dictionaries. If a list were to be used, and thus changed in place, it could invalidate the uniqueness of keys within the dictionary and the corresponding hash search algorithm. 
 
 ---
 
@@ -28,7 +28,14 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> The `lambda` construct is used to simplify functions that have a single line so it may exist inline to where it is called. 
+```python
+#assuming a list of positive or negative numbers, sort by the absolute value of the number
+>>> numbers = [15,-3,2,-4,-10,25]
+>>> sorted(numbers,key=lambda num: abs(num))
+[2, -3, -4, -10, 15, 25]
+>>> 
+```
 
 ---
 
