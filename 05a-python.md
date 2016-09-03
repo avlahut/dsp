@@ -43,7 +43,22 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> List comprehensions allows one to specify the contents of a list using mathematical or set based expressions rather than explicit expressions. There is a lot of overlap in the functionality with `map` and `filter`, especially when combined with a `lambda` expression.
+```python
+>>>#output the list of states that I have visited but have not lived in based on a given list
+>>> statesIveLived = ['CA','WV','OH','NJ','NY','LA']
+>>> statesIveVisited = ['CA','WV','OH','NJ','NY','LA','FL','NV','TX','MO','MN']
+>>>#list comprehension creating new list based on the differences between the two lists
+>>> visitedButNotLived = [ x for x in statesIveVisited if x not in statesIveLived]
+>>> list(visitedButNotLived)
+['FL', 'NV', 'TX', 'MO', 'MN']
+>>>#by using filter and a lambda function
+>>> visitedButNotLived2 = filter(lambda x: x not in statesIveLived, statesIveVisited)
+>>> list(visitedButNotLived2)
+['FL', 'NV', 'TX', 'MO', 'MN']
+>>>#by using the map function
+
+```
 
 ---
 
