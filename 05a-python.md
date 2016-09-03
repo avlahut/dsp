@@ -43,7 +43,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> List comprehensions allows one to specify the contents of a list using mathematical or set based expressions rather than explicit expressions. There is a lot of overlap in the functionality with `map` and `filter`, especially when combined with a `lambda` expression.
+>> List comprehensions allows one to specify the contents of a list using mathematical or set based expressions rather than explicit expressions. There is a lot of overlap in the functionality with `map` and `filter`, especially when combined with a `lambda` expression. However, not all functions can be written in both ways in the same manner. If the definiton rule can not be defined with a `for` or `if` statement, it can not be created with a list comprehension and a map/filter would be more appropriate.
 ```python
 >>>#output the list of states that I have visited but have not lived in based on a given list
 >>> statesIveLived = ['CA','WV','OH','NJ','NY','LA']
@@ -52,13 +52,30 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 >>> visitedButNotLived = [ x for x in statesIveVisited if x not in statesIveLived]
 >>> list(visitedButNotLived)
 ['FL', 'NV', 'TX', 'MO', 'MN']
->>>#by using filter and a lambda function
+>>>#by using filter and a lambda function to filter out all that is in one list but not the other
 >>> visitedButNotLived2 = filter(lambda x: x not in statesIveLived, statesIveVisited)
 >>> list(visitedButNotLived2)
 ['FL', 'NV', 'TX', 'MO', 'MN']
->>>#by using the map function
-
+>>>#by using the map function, which applies a function to all values in the given list
+>>> visitedButNotLived3 = map(lambda x: (x, x not in statesIveLived) , statesIveVisited)
+>>> list(visitedButNotLived3)
+[('CA', False), ('WV', False), ('OH', False), ('NJ', False), ('NY', False), ('LA', False), ('FL', True), ('NV', True), ('TX', True), ('MO', True), ('MN', True)]
 ```
+Set comprehensions are very similar to list comprehensions except it returns a set rather than a list.
+```python
+>>> setVisitedNotLived = { x for x in statesIveVisited if x not in statesIveLived }
+>>> setVisitedNotLived
+{'MN', 'TX', 'MO', 'FL', 'NV'}
+>>> type(setVisitedNotLived)
+<class 'set'>
+```
+Dictionary comprehensions also act in a similar manner but takes two function arguments, one for the keys of the dictionary and one for the values, separated by a `:`.
+```python
+>>> dictVisitedNotLived = { x:  x not in statesIveLived for x in statesIveVisited }
+>>> dictVisitedNotLived
+{'OH': False, 'LA': False, 'MO': True, 'TX': True, 'MN': True, 'NY': False, 'CA': False, 'NJ': False, 'WV': False, 'FL': True, 'NV': True}
+```
+
 
 ---
 
