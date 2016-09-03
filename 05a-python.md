@@ -12,7 +12,7 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and Tuples are similar in that both enable iteration and slicing in the same way and allow the ability to hold different data types. However, the big difference lies in that tuples are immutable while lists are considered mutable. This means that once created, tuples can not be changed.  Lists, however, can be changed in place. Because of this difference and the corresponding consequence that lists do not implement the interface *hashable*, only tuples can be used as keys in dictionaries. If a list were to be used as a key and then changed in place, it would invalidate the uniqueness of keys within the dictionary and the corresponding hash search algorithm. 
 
 ---
 
@@ -20,7 +20,7 @@ How are Python lists and tuples similar and different? Which will work as keys i
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Lists and Sets are both collection of objects that allow for one to query for an elements inclusion as well as iterate over the collection. However, Sets do not allow for duplicate objects to be contained within it and do not allow mutable objects to be held within the Set. (However, the Set itself it considered mutable). Performance for finding an element within it is much faster for a Set as it implements the *hashable* interface as long as you are using the built in methods. Iterating over a Set is slower than iterating over a List.
 
 ---
 
@@ -28,7 +28,14 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> The `lambda` construct is used to simplify functions that have a single line so it may exist inline to where it is called rather than defined separately. 
+```python
+#assuming a list of positive or negative numbers, sort by the absolute value of the number
+>>> numbers = [15,-3,2,-4,-10,25]
+>>> sorted(numbers,key=lambda num: abs(num))
+[2, -3, -4, -10, 15, 25]
+>>> 
+```
 
 ---
 
@@ -51,7 +58,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937
 
 b.  
 ```
@@ -59,7 +66,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513
 
 c.  
 ```
@@ -67,7 +74,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7,850
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
