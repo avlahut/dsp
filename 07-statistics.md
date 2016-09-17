@@ -78,7 +78,7 @@ p(ident twin | boy brother) = (1/300)(1/2) / (1/4)(1/125) + (1/2)(1/300) = .45
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Frequentist probability measures the actual counting of events and assigning them a probability. Bayesian probability assigns a probability prior to any measurements and then refined as more information is known.
 
 ---
 
